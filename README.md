@@ -7,7 +7,7 @@ MacroSnap is a Streamlit app that helps users understand the nutrition of their 
 - Upload a meal photo or describe a dish in plain text
 - Estimate calories and macronutrients (protein, carbs, fat)
 - Keep a conversational nutrition chat for each user
-- Collect a name and WhatsApp number during onboarding
+- Collect a name and Telegram number during onboarding
 - Send a summarized nutrition update to Telegram
 
 ## Tech Stack
@@ -57,7 +57,7 @@ streamlit run app.py
 
 ## How It Works
 
-1. The user enters their name and WhatsApp number.
+1. The user enters their name and Telegram number.
 2. They upload a photo of a meal or type a food description.
 3. Gemini analyzes the meal and estimates calories and macros.
 4. The conversation is displayed in the app.

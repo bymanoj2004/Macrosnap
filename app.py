@@ -25,19 +25,19 @@ if 'onboarded' not in st.session_state:
 
     with st.form("onboarding_form"):
         name = st.text_input("Your name")
-        whatsapp_number = st.text_input(
-            "Whatsapp number (with country code)",
+        telegram_number = st.text_input(
+            "Telegram number (with country code)",
             placeholder="+91XXXXXXXXXX",
         )
 
         submitted = st.form_submit_button("Let's go 🚀")
     
     if submitted:
-        if not name.strip() or not whatsapp_number.strip():
-            st.warning("Please fill in both your name and WhatsApp number.")
+        if not name.strip() or not telegram_number.strip():
+            st.warning("Please fill in both your name and Telegram number.")
         else:
             st.session_state.name = name.strip()
-            st.session_state.whatsapp_number = whatsapp_number.strip()
+            st.session_state.telegram_number = telegram_number.strip()
 
             st.session_state.chat = gemini_client.chats.create(
                 model = "gemini-2.5-flash",
